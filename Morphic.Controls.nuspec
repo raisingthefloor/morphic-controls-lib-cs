@@ -11,6 +11,7 @@
     <repository url="https://github.com/raisingthefloor/morphic-controls-lib-cs" />
     <dependencies>
       <group targetFramework="net6.0-windows10.0.22621.0">
+        <dependency id="Microsoft.Windows.CsWin32" version="0.3.18" exclude="Build,Analyzers" />
         <dependency id="Morphic.Core" version="1.2.0" exclude="Build,Analyzers" />
         <dependency id="Morphic.WindowsNative" version="1.8.0" exclude="Build,Analyzers" />
         <dependency id="PInvoke.Gdi32" version="0.7.124" exclude="Build,Analyzers" />

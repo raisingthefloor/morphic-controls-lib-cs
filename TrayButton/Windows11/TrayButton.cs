@@ -21,31 +21,19 @@
 // * Adobe Foundation
 // * Consumer Electronics Association Foundation
 
-//using Morphic.WindowsNative;
-//using System;
-//using System.Collections.Generic;
-//using System.ComponentModel;
-//using System.Diagnostics;
-//using System.Drawing;
-//using System.Runtime.InteropServices;
-//using System.Windows.Forms;
-
 using Morphic.Core;
 using System;
 using System.Diagnostics;
-using System.Drawing;
-using System.Windows.Forms;
-using static PInvoke.User32;
 
 namespace Morphic.Controls.TrayButton.Windows11;
 
 internal class TrayButton : IDisposable
 {
-     private Bitmap? _bitmap = null;
+     private System.Drawing.Bitmap? _bitmap = null;
      private string? _text = null;
      private bool _visible = false;
 
-     public event MouseEventHandler? MouseUp;
+     public event System.Windows.Forms.MouseEventHandler? MouseUp;
 
      private TrayButtonNativeWindow? _nativeWindow = null;
 
@@ -66,9 +54,9 @@ internal class TrayButton : IDisposable
                     // TODO: dispose managed state (managed objects)
                }
 
+               // TODO: free unmanaged resources (unmanaged objects) and override finalizer
                this.DestroyNativeWindow();
 
-               // TODO: free unmanaged resources (unmanaged objects) and override finalizer
                // TODO: set large fields to null
                disposedValue = true;
           }
@@ -89,7 +77,7 @@ internal class TrayButton : IDisposable
 
      //
 
-     public Bitmap? Bitmap
+     public System.Drawing.Bitmap? Bitmap
      {
           get
           {
